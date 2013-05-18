@@ -12,5 +12,5 @@
 
 + (NSMutableDictionary *)codeAsKeyAndNameAsValue;
 + (NSMutableDictionary *)nameAsKeyAndCodeAsValue;
-
++ (NSMutableArray *)allCityInNSUserDefault;
 @end

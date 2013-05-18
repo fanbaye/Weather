@@ -48,8 +48,6 @@
     _resultArray = [[NSMutableArray alloc] init];
 	// Do any additional setup after loading the view.
     
-    
-    
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 75, 320, 460 - 30 - 45) style:UITableViewStylePlain];
     _tableView.delegate = self;
     _tableView.dataSource = self;
@@ -94,22 +92,7 @@
     btn.frame = CGRectMake(271, 8, 45, 30);
     [btn addTarget:self action:@selector(goBack) forControlEvents:UIControlEventTouchUpInside];
     [searchView addSubview:btn];
-
-//    UIControl *control = [[UIControl alloc] initWithFrame:CGRectMake(0, 75, 320, 460-30-45)];
-//    control.userInteractionEnabled = NO;
-//    [self.view addSubview:control];
-//    [control release];
-//    
-//    UISwipeGestureRecognizer *sgr = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard:)];
-//    sgr.direction = UISwipeGestureRecognizerDirectionUp;
-//    [control addGestureRecognizer:sgr];
-//    [sgr release];
 }
-
-//- (void)hideKeyboard:(UISwipeGestureRecognizer *)sender
-//{
-//    [_searchBar resignFirstResponder];
-//}
 
 #pragma mark - SearchBar Delegate Methods
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
@@ -158,11 +141,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-    NSMutableArray *array = [NSMutableArray arrayWithArray:[ud objectForKey:@"city"]];
-    
+    NSMutableArray *array = [[NSMutableArray alloc] initWithArray:[ud objectForKey:@"city"]];
     [array addObject:[_city objectForKey:[_resultArray objectAtIndex:indexPath.row]]];
-    
     [ud setObject:array forKey:@"city"];
+    [array release];
     [ud synchronize];
     [self dismissViewControllerAnimated:YES completion:^{
         

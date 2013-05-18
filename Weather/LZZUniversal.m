@@ -43,4 +43,20 @@
     return city;
 }
 
++ (NSMutableArray *)allCityInNSUserDefault
+{
+    NSMutableArray *array = [[[NSMutableArray alloc] init] autorelease];
+    
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    
+    [array addObject:[ud objectForKey:@"localCity"]];
+    NSArray *city = [ud objectForKey:@"city"];
+    if ([city count]) {
+        for (NSString *string in city) {
+            [array addObject:string];
+        }
+    }
+    return array;
+}
+
 @end

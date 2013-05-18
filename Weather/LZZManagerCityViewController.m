@@ -58,7 +58,6 @@
     [_tableView release];
     
     
-    
     UIBarButtonItem *rightBBI = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStyleDone target:self action:@selector(editCity:)];
     self.navigationItem.rightBarButtonItem = rightBBI;
     [rightBBI release];
@@ -71,9 +70,13 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    NSMutableArray *array = [NSMutableArray arrayWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:@"city"]];
-    self.dataArray = [NSArray arrayWithObjects:array, nil];
-
+    NSArray *arrayFirstSection = [[NSArray alloc] initWithObjects:[[NSUserDefaults standardUserDefaults] objectForKey:@"localCity"], nil];
+    NSMutableArray *arraySecondSection = [[NSMutableArray alloc] initWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:@"city"]];
+    
+    self.dataArray = [NSArray arrayWithObjects:arrayFirstSection, arraySecondSection, nil];
+    [arrayFirstSection release];
+    [arraySecondSection release];
+    [_tableView reloadData];
     _tableView.editing = YES;
 }
 
@@ -108,9 +111,25 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellName];
     }
+
     NSString *cityCode = [[_dataArray objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
     cell.textLabel.text = [_city objectForKey:cityCode];
     return cell;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return [_dataArray count];
+}
+
+// 设置编辑的属性
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0) {
+        return NO;
+    }else{
+        return YES;
+    }
 }
 
 // 删除

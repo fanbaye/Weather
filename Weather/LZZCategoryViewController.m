@@ -25,6 +25,8 @@
     LZZMainViewController *_mvc;
     UINavigationController *_nvc;
     NSMutableDictionary *_city;
+    
+    NSUserDefaults *_ud;
 }
 
 @synthesize dataArray = _dataArray;
@@ -52,6 +54,7 @@
     
     LZZManagerCityViewController *mcvc = [[LZZManagerCityViewController alloc] init];
     _nvc = [[UINavigationController alloc] initWithRootViewController:mcvc];
+    _ud = [NSUserDefaults standardUserDefaults];
     [mcvc release];
     
     // 解释好的字典
@@ -72,39 +75,37 @@
     [self addChildViewController:_mvc];
     [_mvc release];
     
-    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-    NSString *str = [ud objectForKey:@"localCity"];
-    NSArray *array = [ud objectForKey:@"city"];
-    if ([array count] == 0) {
-        NSArray *cityArray = [[NSArray alloc] initWithObjects:[self getLocalCity], nil];
-        [ud setObject:cityArray forKey:@"city"];
-        [ud synchronize];
-        array = cityArray;
-        [cityArray release];
-    }
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    _mvc.view.frame = CGRectMake(0, 0, 320, 460);
+    
+    [self getLocalCity];
     
     NSMutableArray *arrayFirstSection = [[NSMutableArray alloc] init];
     [arrayFirstSection addObject:@"编辑地点"];
-    for (NSString *str in array) {
+    [arrayFirstSection addObject:[_ud objectForKey:@"localCity"]];
+    for (NSString *str in [_ud objectForKey:@"city"]) {
         [arrayFirstSection addObject:str];
     }
     
     NSArray *arraySecondSection = [NSArray arrayWithObjects:@"设置", @"建议", @"关于", nil];
     
     self.dataArray = [NSArray arrayWithObjects:arrayFirstSection, arraySecondSection, nil];
-    NSLog(@"%d", [_dataArray count]);
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    _mvc.view.frame = CGRectMake(0, 0, 320, 460); 
+    [_tableView reloadData];
 }
 
 
-- (NSString *)getLocalCity
+- (void)getLocalCity
 {
-    return @"101010100";
+    NSString *str = [_ud objectForKey:@"localCity"];
+    if (!str) {
+        [_ud setObject:@"101010100" forKey:@"localCity"];
+        [_ud synchronize];
+    }
 }
 
 #pragma mark - TableView Delegate Methods
@@ -122,8 +123,14 @@
     }
     
     NSString *cityCode = [[_dataArray objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
-    if (indexPath.section == 0 && indexPath.row > 0) {
-        cell.label.text = [_city objectForKey:cityCode];
+    if (indexPath.section == 0) {
+        if (indexPath.row == 0) {
+            cell.label.text = cityCode;
+        }else if (indexPath.row == 1){
+            cell.label.text = @"目前位置";
+        }else{
+            cell.label.text = [_city objectForKey:cityCode];
+        }
     }else{
         cell.label.text = cityCode;
     }

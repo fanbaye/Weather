@@ -9,6 +9,7 @@
 #import "LZZMainViewController.h"
 #import "LZZAddCityViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "LZZUniversal.h"
 
 @interface LZZMainViewController ()
 
@@ -77,18 +78,10 @@
     [_rightBlackView release];
 }
 
-
-- (void)dealUserDefault
-{
-    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-    _pageCount = [[ud objectForKey:@"city"] count];
-    return;
-}
-
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self dealUserDefault];
+    _pageCount = [[LZZUniversal allCityInNSUserDefault] count];
     
     _scrollView.contentSize = CGSizeMake(320 * _pageCount, 460);
     _rightBlackView.frame = CGRectMake(_pageCount * 320, 0, 320, 460);
@@ -98,8 +91,7 @@
 
 - (void)setAllCityView
 {
-    NSUserDefaults  *ud = [NSUserDefaults standardUserDefaults];
-    NSArray *array = [[NSArray alloc] initWithArray:[ud objectForKey:@"city"]];
+    NSArray *array = [LZZUniversal allCityInNSUserDefault];
     
     // 重置前清空
     while ([_scrollView.subviews count] > 2) {
@@ -113,8 +105,8 @@
         [_scrollView addSubview:cityView];
         [cityView release];
     }
-    [array release];
     
+        
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
