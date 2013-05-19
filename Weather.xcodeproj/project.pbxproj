@@ -33,6 +33,18 @@
 		043A9697174644090047F828 /* LZZAddCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043A9696174644090047F828 /* LZZAddCityViewController.m */; };
 		043A969A17464A100047F828 /* LZZCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043A969917464A100047F828 /* LZZCategoryViewController.m */; };
 		043A969C17465ECD0047F828 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 043A969B17465ECD0047F828 /* QuartzCore.framework */; };
+		046264821747D06D0009E2AA /* city.png in Resources */ = {isa = PBXBuildFile; fileRef = 046264811747D06D0009E2AA /* city.png */; };
+		0462648E1747D6290009E2AA /* opacity.png in Resources */ = {isa = PBXBuildFile; fileRef = 0462648D1747D6290009E2AA /* opacity.png */; };
+		046264901747D8CD0009E2AA /* warm.png in Resources */ = {isa = PBXBuildFile; fileRef = 0462648F1747D8CD0009E2AA /* warm.png */; };
+		0462649F1747DD0B0009E2AA /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 046264951747DD0B0009E2AA /* EGORefreshTableHeaderView.m */; };
+		046264A01747DD0B0009E2AA /* blackArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 046264971747DD0B0009E2AA /* blackArrow.png */; };
+		046264A11747DD0B0009E2AA /* blackArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 046264981747DD0B0009E2AA /* blackArrow@2x.png */; };
+		046264A21747DD0B0009E2AA /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 046264991747DD0B0009E2AA /* blueArrow.png */; };
+		046264A31747DD0B0009E2AA /* blueArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0462649A1747DD0B0009E2AA /* blueArrow@2x.png */; };
+		046264A41747DD0B0009E2AA /* grayArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0462649B1747DD0B0009E2AA /* grayArrow.png */; };
+		046264A51747DD0B0009E2AA /* grayArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0462649C1747DD0B0009E2AA /* grayArrow@2x.png */; };
+		046264A61747DD0B0009E2AA /* whiteArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0462649D1747DD0B0009E2AA /* whiteArrow.png */; };
+		046264A71747DD0B0009E2AA /* whiteArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0462649E1747DD0B0009E2AA /* whiteArrow@2x.png */; };
 		04E679051744FE0B005BA5C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E679041744FE0B005BA5C2 /* UIKit.framework */; };
 		04E679071744FE0B005BA5C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E679061744FE0B005BA5C2 /* Foundation.framework */; };
 		04E679091744FE0B005BA5C2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E679081744FE0B005BA5C2 /* CoreGraphics.framework */; };
@@ -44,7 +56,6 @@
 		04E6791B1744FE0B005BA5C2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E6791A1744FE0B005BA5C2 /* Default-568h@2x.png */; };
 		04E679231744FE21005BA5C2 /* LZZMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E679221744FE21005BA5C2 /* LZZMainViewController.m */; };
 		04EDD0DF174671B00082388F /* cityCode.txt in Resources */ = {isa = PBXBuildFile; fileRef = 04EDD0DE174671B00082388F /* cityCode.txt */; };
-		04EDD0E1174696BC0082388F /* view.png in Resources */ = {isa = PBXBuildFile; fileRef = 04EDD0E0174696BC0082388F /* view.png */; };
 		04EDD0E417469B7F0082388F /* LZZCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EDD0E317469B7F0082388F /* LZZCategoryCell.m */; };
 		04EDD0EC17469EDD0082388F /* cellBackgroundView.png in Resources */ = {isa = PBXBuildFile; fileRef = 04EDD0EB17469EDD0082388F /* cellBackgroundView.png */; };
 		04F9F93917453359004741ED /* LZZCityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9F93817453359004741ED /* LZZCityView.m */; };
@@ -95,6 +106,19 @@
 		043A969817464A100047F828 /* LZZCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZZCategoryViewController.h; sourceTree = "<group>"; };
 		043A969917464A100047F828 /* LZZCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZZCategoryViewController.m; sourceTree = "<group>"; };
 		043A969B17465ECD0047F828 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		046264811747D06D0009E2AA /* city.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = city.png; sourceTree = "<group>"; };
+		0462648D1747D6290009E2AA /* opacity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = opacity.png; sourceTree = "<group>"; };
+		0462648F1747D8CD0009E2AA /* warm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warm.png; sourceTree = "<group>"; };
+		046264941747DD0B0009E2AA /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
+		046264951747DD0B0009E2AA /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
+		046264971747DD0B0009E2AA /* blackArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackArrow.png; sourceTree = "<group>"; };
+		046264981747DD0B0009E2AA /* blackArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackArrow@2x.png"; sourceTree = "<group>"; };
+		046264991747DD0B0009E2AA /* blueArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrow.png; sourceTree = "<group>"; };
+		0462649A1747DD0B0009E2AA /* blueArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueArrow@2x.png"; sourceTree = "<group>"; };
+		0462649B1747DD0B0009E2AA /* grayArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grayArrow.png; sourceTree = "<group>"; };
+		0462649C1747DD0B0009E2AA /* grayArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grayArrow@2x.png"; sourceTree = "<group>"; };
+		0462649D1747DD0B0009E2AA /* whiteArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteArrow.png; sourceTree = "<group>"; };
+		0462649E1747DD0B0009E2AA /* whiteArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteArrow@2x.png"; sourceTree = "<group>"; };
 		04E679011744FE0B005BA5C2 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E679041744FE0B005BA5C2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		04E679061744FE0B005BA5C2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -111,7 +135,6 @@
 		04E679211744FE21005BA5C2 /* LZZMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZZMainViewController.h; sourceTree = "<group>"; };
 		04E679221744FE21005BA5C2 /* LZZMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZZMainViewController.m; sourceTree = "<group>"; };
 		04EDD0DE174671B00082388F /* cityCode.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cityCode.txt; sourceTree = "<group>"; };
-		04EDD0E0174696BC0082388F /* view.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = view.png; sourceTree = "<group>"; };
 		04EDD0E217469B7F0082388F /* LZZCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZZCategoryCell.h; sourceTree = "<group>"; };
 		04EDD0E317469B7F0082388F /* LZZCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZZCategoryCell.m; sourceTree = "<group>"; };
 		04EDD0EB17469EDD0082388F /* cellBackgroundView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cellBackgroundView.png; sourceTree = "<group>"; };
@@ -150,11 +173,13 @@
 		043A95F01745E1610047F828 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				0462648F1747D8CD0009E2AA /* warm.png */,
+				0462648D1747D6290009E2AA /* opacity.png */,
+				046264811747D06D0009E2AA /* city.png */,
 				0428214A174747160047BACE /* sectionHead.png */,
 				0428214817473E1F0047BACE /* topLine.png */,
 				0428214417473B580047BACE /* cancel.png */,
 				04EDD0EB17469EDD0082388F /* cellBackgroundView.png */,
-				04EDD0E0174696BC0082388F /* view.png */,
 				043A95F31745F0F20047F828 /* settingButtom.png */,
 				043A95F11745EFD00047F828 /* addButtom.png */,
 			);
@@ -201,6 +226,47 @@
 			path = JSONKit;
 			sourceTree = "<group>";
 		};
+		046264911747DD0B0009E2AA /* EGOTableViewPullRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				046264921747DD0B0009E2AA /* Classes */,
+				046264961747DD0B0009E2AA /* Resources */,
+			);
+			path = EGOTableViewPullRefresh;
+			sourceTree = "<group>";
+		};
+		046264921747DD0B0009E2AA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				046264931747DD0B0009E2AA /* View */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		046264931747DD0B0009E2AA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				046264941747DD0B0009E2AA /* EGORefreshTableHeaderView.h */,
+				046264951747DD0B0009E2AA /* EGORefreshTableHeaderView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		046264961747DD0B0009E2AA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				046264971747DD0B0009E2AA /* blackArrow.png */,
+				046264981747DD0B0009E2AA /* blackArrow@2x.png */,
+				046264991747DD0B0009E2AA /* blueArrow.png */,
+				0462649A1747DD0B0009E2AA /* blueArrow@2x.png */,
+				0462649B1747DD0B0009E2AA /* grayArrow.png */,
+				0462649C1747DD0B0009E2AA /* grayArrow@2x.png */,
+				0462649D1747DD0B0009E2AA /* whiteArrow.png */,
+				0462649E1747DD0B0009E2AA /* whiteArrow@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		04E678F81744FE0B005BA5C2 = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +302,7 @@
 		04E6790A1744FE0B005BA5C2 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				046264911747DD0B0009E2AA /* EGOTableViewPullRefresh */,
 				043A961D1745FD750047F828 /* JSONKit */,
 				043A95F51745FCAE0047F828 /* ASIHTTPRequest */,
 				043A95F01745E1610047F828 /* Image */,
@@ -335,11 +402,21 @@
 				043A96221745FD750047F828 /* CHANGELOG.md in Resources */,
 				043A96241745FD750047F828 /* README.md in Resources */,
 				04EDD0DF174671B00082388F /* cityCode.txt in Resources */,
-				04EDD0E1174696BC0082388F /* view.png in Resources */,
 				04EDD0EC17469EDD0082388F /* cellBackgroundView.png in Resources */,
 				0428214517473B580047BACE /* cancel.png in Resources */,
 				0428214917473E1F0047BACE /* topLine.png in Resources */,
 				0428214B174747160047BACE /* sectionHead.png in Resources */,
+				046264821747D06D0009E2AA /* city.png in Resources */,
+				0462648E1747D6290009E2AA /* opacity.png in Resources */,
+				046264901747D8CD0009E2AA /* warm.png in Resources */,
+				046264A01747DD0B0009E2AA /* blackArrow.png in Resources */,
+				046264A11747DD0B0009E2AA /* blackArrow@2x.png in Resources */,
+				046264A21747DD0B0009E2AA /* blueArrow.png in Resources */,
+				046264A31747DD0B0009E2AA /* blueArrow@2x.png in Resources */,
+				046264A41747DD0B0009E2AA /* grayArrow.png in Resources */,
+				046264A51747DD0B0009E2AA /* grayArrow@2x.png in Resources */,
+				046264A61747DD0B0009E2AA /* whiteArrow.png in Resources */,
+				046264A71747DD0B0009E2AA /* whiteArrow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +446,7 @@
 				04EDD0E417469B7F0082388F /* LZZCategoryCell.m in Sources */,
 				0428214317471D9D0047BACE /* LZZManagerCityViewController.m in Sources */,
 				0428214F1747579A0047BACE /* LZZUniversal.m in Sources */,
+				0462649F1747DD0B0009E2AA /* EGORefreshTableHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

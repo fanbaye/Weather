@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ASIHTTPRequest.h"
+#import "EGORefreshTableHeaderView.h"
 
 @protocol LZZCityViewDelegate <NSObject>
 
@@ -15,7 +16,7 @@
 
 @end
 
-@interface LZZCityView : UIView <ASIHTTPRequestDelegate>
+@interface LZZCityView : UIView <ASIHTTPRequestDelegate, EGORefreshTableHeaderDelegate, UIScrollViewDelegate>
 
 {
     id<LZZCityViewDelegate> _delegate;

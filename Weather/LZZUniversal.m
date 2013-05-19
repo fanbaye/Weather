@@ -59,4 +59,23 @@
     return array;
 }
 
++ (NSMutableArray *)weekdaysFormatter:(NSString *)weekday
+{
+    NSArray *array = [[NSArray alloc] initWithObjects:@"星期一", @"星期二",@"星期三",@"星期四",@"星期五",@"星期六",@"星期天",@"星期一",@"星期二",@"星期三",@"星期四",@"星期五", nil];
+    NSMutableArray *result = [[[NSMutableArray alloc] init] autorelease];
+    for (int i = 0; i < 7; i++) {
+        if ([weekday isEqualToString:[array objectAtIndex:i]]) {
+            [result addObject:weekday];
+            [result addObject:[array objectAtIndex:i+1]];
+            [result addObject:[array objectAtIndex:i+2]];
+            [result addObject:[array objectAtIndex:i+3]];
+            [result addObject:[array objectAtIndex:i+4]];
+            [result addObject:[array objectAtIndex:i+5]];
+            break;
+        }
+    }
+    [array release];
+    return result;
+}
+
 @end

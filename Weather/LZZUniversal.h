@@ -13,4 +13,5 @@
 + (NSMutableDictionary *)codeAsKeyAndNameAsValue;
 + (NSMutableDictionary *)nameAsKeyAndCodeAsValue;
 + (NSMutableArray *)allCityInNSUserDefault;
++ (NSMutableArray *)weekdaysFormatter:(NSString *)weekday;
 @end

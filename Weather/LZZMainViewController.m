@@ -21,6 +21,7 @@
     UIView *_rightBlackView;
     int _pageCount;
     LZZAddCityViewController *_acvc;
+    
 }
 
 @synthesize scrollView = _scrollView;
@@ -29,6 +30,7 @@
 {
     self.scrollView = nil;
     [_acvc release];
+    
     [super dealloc];
 }
 
@@ -58,6 +60,8 @@
     _scrollView.delegate = self;
     [self.view addSubview:_scrollView];
     [_scrollView release];
+    
+    
     
     // 上部的橙色条
     UIView *topOrangeLine = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 1)];
@@ -111,23 +115,16 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-//    double x = scrollView.contentOffset.x;
-//    int page = (int)x/320;
-//    double xx = x;
-//    if (x > page * 320) {
-//        xx = x - page* 320;
-//    }
-//    NSLog(@"%f", xx);
-//    for (int i = 2; i < [_scrollView.subviews count] - 1; i++) {
-//        UIView *view = [_scrollView.subviews objectAtIndex:i];
-//        UIImageView *imageView = [view.subviews objectAtIndex:0];
-//        if (i == 2) {
-//            imageView.frame = CGRectMake(xx/4, 0, 320, 460);
-//        }else{
-//            imageView.frame = CGRectMake(-80+xx/4, 0, 320, 460);
-//        }
-//    }
-    
+    double x = scrollView.contentOffset.x;
+    int page = (int)(x-1)/320;
+    double xx = x - page*320;
+    UIImageView *preView = (UIImageView *)[[(UIView *)[_scrollView.subviews objectAtIndex:page + 2] subviews] objectAtIndex:0];
+    preView.frame = CGRectMake(xx/4, 0, 320, 460);
+    if (x < (_pageCount - 1) * 320) {
+        UIImageView *nextView = (UIImageView *)[[(UIView *)[_scrollView.subviews objectAtIndex:page + 3] subviews] objectAtIndex:0];
+        
+        nextView.frame = CGRectMake(-80 + xx/4, 0, 320, 460);
+    }
 }
 
 #pragma mark - LZZCityView Delegate Methods

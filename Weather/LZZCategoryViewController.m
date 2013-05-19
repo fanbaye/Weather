@@ -75,7 +75,11 @@
     [self addChildViewController:_mvc];
     [_mvc release];
     
-    
+    // 上部的橙色条
+    UIView *topOrangeLine = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 1)];
+    topOrangeLine.backgroundColor = [UIColor orangeColor];
+    [self.view addSubview:topOrangeLine];
+    [topOrangeLine release];
 }
 
 - (void)viewWillAppear:(BOOL)animated
